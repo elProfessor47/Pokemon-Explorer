@@ -42,7 +42,7 @@ const PokemonCard = ({ currPokemon }) => {
           <span className="underline font-semibold 450:text-lg sm:text-sm 800:text-md">
             Speed:
           </span>
-          <p>({currPokemon.stats[5].base_stat}")</p>
+          <p>("{currPokemon.stats[5].base_stat}")</p>
         </div>
       </div>
       <div className="grid grid-cols-3 px-2 text-sm">
@@ -62,10 +62,10 @@ const PokemonCard = ({ currPokemon }) => {
           <span className="underline font-semibold 450:text-lg sm:text-sm 800:text-md">
             Ability:
           </span>
-          <p>
-            {currPokemon.abilities
+          <p className="tracking-tighter mr-2">
+            ("{currPokemon.abilities
               .map((currAbilityObj) => currAbilityObj.ability.name)
-              .slice(0, 1)}
+              .slice(0, 1)}")
           </p>
         </div>
       </div>
